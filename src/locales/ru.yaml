@@ -1,0 +1,16 @@
+start: <b>Выберите тип валюты:</b>
+update: Обновить
+back: « Обратно
+exchange: Курс ${baseCcy} -> ${ccy}
+select: |
+  <b>${course.base_ccy} -> ${course.ccy}:</b>
+
+  Покупка: <code>${course.buy}</code> 
+  Продажа: <code>${course.sale}</code>
+updated: |
+  <b>${course.base_ccy} -> ${course.ccy}:</b>
+
+  Покупка: <code>${course.buy} ${buyDiff ? buyDiff : ''}</code> 
+  Продажа: <code>${course.sale} ${saleDiff ? saleDiff : ''}</code>
+
+  ${currentTime ? '<i>Последнее обновление в ' + currentTime + '</i>' : ''}

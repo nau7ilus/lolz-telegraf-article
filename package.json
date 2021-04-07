@@ -1,0 +1,34 @@
+{
+  "name": "lolz-telegraf-article",
+  "version": "1.0.0",
+  "description": "Код для статьи на https://lolz.guru",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieopierzony/lolz-telegraf-article.git"
+  },
+  "author": "Philipp Zelinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nieopierzony/lolz-telegraf-article/issues"
+  },
+  "homepage": "https://github.com/nieopierzony/lolz-telegraf-article#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "telegraf": "^3.38.0",
+    "telegraf-i18n": "^6.6.0"
+  }
+}
