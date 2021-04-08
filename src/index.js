@@ -28,8 +28,6 @@ bot.action('start', startHandler);
 bot.action(/^select(?:::(\w+))$/, selectHandler);
 bot.action(/^update(?:::(\w+))(?:::([+-]?[0-9]*[.]?[0-9]+))(?:::([+-]?[0-9]*[.]?[0-9]+))$/, updateHandler);
 
-bot.launch(-1);
-
 getExchange().then(data => {
   bot.context.currency = data.map(i => i.ccy);
 });
