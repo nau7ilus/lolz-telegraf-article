@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const path = require('path');
-const { Telegraf, session } = require('telegraf');
+const { Telegraf } = require('telegraf');
 const TelegrafI18n = require('telegraf-i18n');
 
 const { startHandler, selectHandler, updateHandler, inlineHandler } = require('./handlers');
@@ -10,7 +10,6 @@ const getExchange = require('./helpers/getExchange');
 const { BOT_TOKEN } = process.env;
 const bot = new Telegraf(BOT_TOKEN);
 const i18n = new TelegrafI18n({
-  useSession: true,
   defaultLanguage: 'ru',
   directory: path.resolve(__dirname, 'locales'),
   templateData: {
@@ -18,7 +17,6 @@ const i18n = new TelegrafI18n({
   },
 });
 
-bot.use(session());
 bot.use(i18n.middleware());
 
 bot.start(startHandler);
