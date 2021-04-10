@@ -12,9 +12,6 @@ const bot = new Telegraf(BOT_TOKEN);
 const i18n = new TelegrafI18n({
   defaultLanguage: 'ru',
   directory: path.resolve(__dirname, 'locales'),
-  templateData: {
-    pluralize: TelegrafI18n.pluralize,
-  },
 });
 
 bot.use(i18n.middleware());
